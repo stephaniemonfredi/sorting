@@ -111,8 +111,7 @@ function displayResults(filteredHikes) {
         <div class="hike-content">
           <h2>${hike.name}</h2>
           <div class="hike-tags">
-            <button>Canyon</button>
-            <button>Tetons</button>
+            ${hike.tags.map(tag => `<button>${tag}</button>`).join("")}
           </div>
           <p>${hike.description}</p>
           <p><span class="rating" role="img" aria-label="1 out of 5">🥾</span></p>
